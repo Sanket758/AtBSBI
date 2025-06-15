@@ -1,0 +1,63 @@
+Model,Title,Parameters,Accuracy,Precision,Recall,F1 Score,ROC AUC,PRC AUC,Confusion Matrix
+LogisticRegression,Logistic Regression (Baseline),"LogisticRegression(max_iter=1000, random_state=1337)",0.9916084407148625,0.16071428571428573,0.9183673469387755,0.2735562310030395,0.9550510060523928,0.47229532090956483,"[[28197   235]
+ [    4    45]]"
+LogisticRegression,Logistic Regression (Baseline) - class_weight=balanced,"LogisticRegression(class_weight='balanced', max_iter=1000, random_state=1337)",0.9916084407148625,0.16071428571428573,0.9183673469387755,0.2735562310030395,0.9550510060523928,0.47229532090956483,"[[28197   235]
+ [    4    45]]"
+RandomForest,RandomForest - Basic - SMOTE,RandomForestClassifier(random_state=1337),0.9995786664794073,0.8936170212765957,0.8571428571428571,0.875,0.9284834994774501,0.19476981135872948,"[[28427     5]
+ [    7    42]]"
+XgBoost,XgBoost - Basic - SMOTE,"XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cuda:0',
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric=None, feature_types=None, gamma=None,
+              grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=None, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=100, n_jobs=None,
+              num_parallel_tree=None, random_state=1337, ...)",0.9996137776061234,0.8958333333333334,0.8775510204081632,0.8865979381443299,0.938687581110103,0.0010245811712561485,"[[28427     5]
+ [    6    43]]"
+LogisticRegression,LogisticRegression - Hyperparameter Tuned - (Train + Val),"LogisticRegression(class_weight='balanced', max_iter=500, n_jobs=6,
+                   random_state=1337)",0.9783364348161933,0.06574923547400612,0.8775510204081632,0.12233285917496443,0.9280305749198947,0.43926884972662866,"[[27821   611]
+ [    6    43]]"
+RandomForest,RandomForest - Hyperparameter Tuned - (Train + Val),"RandomForestClassifier(n_estimators=200, n_jobs=6, random_state=1337)",0.9994733330992591,0.9473684210526315,0.7346938775510204,0.8275862068965517,0.8673117671379188,0.08249588987493227,"[[28430     2]
+ [   13    36]]"
+XGBoost,XGBoost - Hyperparameter Tuned - (Train + Val),"XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cuda:0',
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric=None, feature_types=None, gamma=None,
+              grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.01, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=500, n_jobs=6,
+              num_parallel_tree=None, random_state=1337, ...)",0.9995435553526912,1.0,0.7346938775510204,0.8470588235294118,0.8673469387755102,0.0008633340732920116,"[[28432     0]
+ [   13    36]]"
+MLP,MLP - Hyperparameter Tuned - (Train + Val),"MLPClassifier(activation='tanh', early_stopping=True,
+              hidden_layer_sizes=(10, 20, 50, 100), learning_rate='adaptive',
+              random_state=1337)",0.9991573329588147,0.7906976744186046,0.6938775510204082,0.7391304347826086,0.8467805031410425,0.0008644278886001191,"[[28423     9]
+ [   15    34]]"
+VotingClassifier,VotingClassifier - Hyperparameter Tuned - (Train + Val),LogReg + XGBoost params,0.9989817773252344,0.6785714285714286,0.7755102040816326,0.7238095238095238,0.8874385573024932,0.0010134517215617072,"[[28414    18]
+ [   11    38]]"
+Ensemble - XGBoost + RandomForest,Ensamble(XGBoost + RandomForest) - Hyperparameter Tuned,XGBoost + RandomForest,0.9990519995786665,1.0,0.4489795918367347,0.6197183098591549,0.7244897959183674,0.6570705087725099,"[[28432     0]
+ [   27    22]]"
+IsolationForest,IsolationForest,"{'bootstrap': False, 'contamination': 0.01, 'max_features': 1.0, 'max_samples': 'auto', 'n_estimators': 100, 'n_jobs': None, 'random_state': 1337, 'verbose': 0, 'warm_start': False}",0.9896071064920473,0.07849829351535836,0.46938775510204084,0.13450292397660818,0.7299457064761752,0.27439946895600836,"[[28162   270]
+ [   26    23]]"
+XGBoost + ISO Forest,XGBoost + ISO Forest,"{'objective': 'binary:logistic', 'base_score': None, 'booster': None, 'callbacks': None, 'colsample_bylevel': None, 'colsample_bynode': None, 'colsample_bytree': None, 'device': 'cuda:0', 'early_stopping_rounds': None, 'enable_categorical': False, 'eval_metric': None, 'feature_types': None, 'gamma': None, 'grow_policy': None, 'importance_type': None, 'interaction_constraints': None, 'learning_rate': 0.01, 'max_bin': None, 'max_cat_threshold': None, 'max_cat_to_onehot': None, 'max_delta_step': None, 'max_depth': None, 'max_leaves': None, 'min_child_weight': None, 'missing': nan, 'monotone_constraints': None, 'multi_strategy': None, 'n_estimators': 500, 'n_jobs': None, 'num_parallel_tree': None, 'random_state': 1337, 'reg_alpha': None, 'reg_lambda': None, 'sampling_method': None, 'scale_pos_weight': 0.0017322412299792043, 'subsample': None, 'tree_method': None, 'validate_parameters': None, 'verbosity': None}",0.9989817773252344,0.6785714285714286,0.7755102040816326,0.7238095238095238,0.8874385573024932,0.1131059115324423,"[[28414    18]
+ [   11    38]]"
+StackedClassifier,StackedClassifier - (Train + Val),"[('xgb', XGBClassifier(base_score=None, booster=None, callbacks=None,
+              colsample_bylevel=None, colsample_bynode=None,
+              colsample_bytree=None, device='cuda:0',
+              early_stopping_rounds=None, enable_categorical=False,
+              eval_metric=None, feature_types=None, gamma=None,
+              grow_policy=None, importance_type=None,
+              interaction_constraints=None, learning_rate=0.01, max_bin=None,
+              max_cat_threshold=None, max_cat_to_onehot=None,
+              max_delta_step=None, max_depth=None, max_leaves=None,
+              min_child_weight=None, missing=nan, monotone_constraints=None,
+              multi_strategy=None, n_estimators=500, n_jobs=None,
+              num_parallel_tree=None, random_state=1337, ...)), ('rf', RandomForestClassifier(n_estimators=200)), ('mlp', MLPClassifier(hidden_layer_sizes=(10, 20, 50, 100), learning_rate='adaptive'))]",0.9995084442259752,1.0,0.7142857142857143,0.8333333333333334,0.8571428571428572,0.0008617581735391756,"[[28432     0]
+ [   14    35]]"
