@@ -1,0 +1,18 @@
+class_idx,class_name,precision,recall,f1,support
+0,Corn___Common_Rust,0.0,0.0,0.0,120
+1,Corn___Gray_Leaf_Spot,0.0,0.0,0.0,52
+2,Corn___Healthy,0.0,0.0,0.0,117
+3,Corn___Northern_Leaf_Blight,0.008403361344537815,0.010101010101010102,0.009174311926605505,99
+4,Potato___Early_Blight,0.0,0.0,0.0,100
+5,Potato___Healthy,0.0,0.0,0.0,16
+6,Potato___Late_Blight,0.0,0.0,0.0,100
+7,Rice___Brown_Spot,0.0,0.0,0.0,62
+8,Rice___Healthy,0.0,0.0,0.0,150
+9,Rice___Leaf_Blast,0.08333333333333333,0.010101010101010102,0.01801801801801802,99
+10,Rice___Neck_Blast,0.018691588785046728,0.02,0.01932367149758454,100
+11,Sugarcane__Bacterial Blight,0.0,0.0,0.0,10
+12,Sugarcane__Healthy,0.0,0.0,0.0,10
+13,Sugarcane__Red Rot,0.0,0.0,0.0,10
+14,Wheat___Brown_Rust,0.9880952380952381,0.9120879120879121,0.9485714285714287,91
+15,Wheat___Healthy,0.5707070707070707,1.0,0.7266881028938906,113
+16,Wheat___Yellow_Rust,1.0,0.989247311827957,0.9945945945945946,93

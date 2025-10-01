@@ -1,0 +1,9 @@
+model,f1_score,precision,recall,top1_accuracy,top5_accuracy,inference_time_ms,model_size_mb,top1_accuracy_pct
+ResNet18_Finetuned,0.901,0.911,0.901,0.923,0.999,9.598,32.053,92.30000000000001
+MobileNet-V2_Finetuned,0.845,0.857,0.848,0.876,0.999,5.9,8.566,87.6
+EfficientNetB2_FineTuned,0.758,0.814,0.775,0.835,0.996,76.964,1.993,83.5
+ResNet18_Siamese_Classifier,0.506,0.508,0.548,0.758,0.961,10.761,0.008,75.8
+MobileNetV2_Frozen,0.146,0.126,0.177,0.221,0.376,26.278,8.566,22.1
+EfficientNetB2_Frozen,0.16,0.157,0.173,0.218,0.478,29.211,29.468,21.8
+ResNet18_Frozen,0.142,0.154,0.145,0.181,0.51,3.526,42.668,18.099999999999998
+ResNet18_Scratch,0.006,0.003,0.058,0.038,0.241,9.87,0.033,3.8

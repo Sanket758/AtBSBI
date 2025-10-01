@@ -1,0 +1,112 @@
+{
+  "num_samples": 1342,
+  "loss": 11.206046831057074,
+  "accuracy": 18.107302533532042,
+  "accuracy_top5": 50.968703427719824,
+  "num_parameters": 11185233,
+  "inference_time_ms": 3.5264086723327637,
+  "per_class": {
+    "Corn___Common_Rust": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 120
+    },
+    "Corn___Gray_Leaf_Spot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 52
+    },
+    "Corn___Healthy": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 117
+    },
+    "Corn___Northern_Leaf_Blight": {
+      "precision": 0.008333333333333333,
+      "recall": 0.010101010101010102,
+      "f1": 0.0091324200913242,
+      "support": 99
+    },
+    "Potato___Early_Blight": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 100
+    },
+    "Potato___Healthy": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 16
+    },
+    "Potato___Late_Blight": {
+      "precision": 0.06363636363636363,
+      "recall": 0.07,
+      "f1": 0.06666666666666667,
+      "support": 100
+    },
+    "Rice___Brown_Spot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 62
+    },
+    "Rice___Healthy": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 150
+    },
+    "Rice___Leaf_Blast": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 99
+    },
+    "Rice___Neck_Blast": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 100
+    },
+    "Sugarcane__Bacterial Blight": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 10
+    },
+    "Sugarcane__Healthy": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 10
+    },
+    "Sugarcane__Red Rot": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 10
+    },
+    "Wheat___Brown_Rust": {
+      "precision": 0.56875,
+      "recall": 1.0,
+      "f1": 0.7250996015936254,
+      "support": 91
+    },
+    "Wheat___Healthy": {
+      "precision": 0.9775280898876404,
+      "recall": 0.7699115044247787,
+      "f1": 0.8613861386138614,
+      "support": 113
+    },
+    "Wheat___Yellow_Rust": {
+      "precision": 1.0,
+      "recall": 0.6129032258064516,
+      "f1": 0.76,
+      "support": 93
+    }
+  }
+}
