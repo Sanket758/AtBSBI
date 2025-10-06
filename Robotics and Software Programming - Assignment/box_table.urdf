@@ -1,0 +1,23 @@
+
+<?xml version="1.0"?>
+<robot name="box_table">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="1.0 0.6 0.4"/>
+      </geometry>
+      <material name="brown">
+        <color rgba="0.6 0.3 0.1 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="1.0 0.6 0.4"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+</robot>
