@@ -1,0 +1,221 @@
+version: "3.1"
+intents:
+  - greet
+  - ask_programs
+  - ask_location
+  - ask_specific_program
+  - ask_programs_by_level
+  - ask_fees
+  - ask_scholarship
+  - goodbye
+  - thank_you
+  - bot_challenge
+  - faq
+
+entities:
+  - program
+  - program_level
+
+slots:
+  program:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: program
+      not_intent:
+        - ask_programs_by_level
+  
+  program_level:
+    type: categorical
+    values:
+      - undergraduate
+      - postgraduate
+      - doctorate
+      - certificate
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: program_level
+      - type: from_intent
+        intent: ask_programs_by_level
+        value: postgraduate
+
+responses:
+  utter_greet:
+    - text: "Hi! 👋 Welcome to BSBI. I can help you with programs, fees, admissions, and scholarships. What would you like to know?"
+
+  utter_location:
+    - text: "We are located at Alte Post, Berlin, Germany."
+
+  utter_ask_which_level:
+    - text: "We offer many programs. Are you interested in Undergraduate (Bachelors), Postgraduate (Masters), or Short Certificates?"
+      buttons:
+        - title: "Undergraduate"
+          payload: '/ask_programs_by_level{"program_level":"undergraduate"}'
+        - title: "Postgraduate"
+          payload: '/ask_programs_by_level{"program_level":"postgraduate"}'
+        - title: "Certificates"
+          payload: '/ask_programs_by_level{"program_level":"certificate"}'
+
+  utter_list_undergraduate:
+    - text: "Here are our Bachelor's degrees:\n- BA Economics & Business Admin\n- BA Tourism & Hospitality\n- BA Animation\n- BA Graphic Design\n- BSc Psychology\n\nWhich one interests you?"
+
+  utter_list_postgraduate:
+    - text: "Here are our Master's degrees:\n- Global MBA\n- MA Energy Management\n- MA Innovation & Entrepreneurship\n- MA Tourism\n- MSc Finance & Investment\n\nWhich one interests you?"
+
+  utter_programs:
+    - text: |
+        Here are our most popular programs:
+        • MSc Artificial Intelligence
+        • Global MBA
+        • MSc Data Analytics
+        • MA Digital Marketing
+        • BSc Computer Science
+        
+        Type the name of any program (e.g., AI or MBA) if you want details!
+
+  utter_ask_which_program:
+    - text: "Which program are you asking about? (e.g., Robotics, AI, MBA)"
+
+  utter_list_certificate:
+    - text: "We offer short courses in:\n- Blockchain\n- Digital Marketing\n- Project Management\n- Financial Modelling"
+
+  utter_fees_specific:
+    - text: "Tuition fees for {program} range from €8,500 – €12,500 per year depending on the program. We have flexible payment plans and scholarships too!"
+
+  utter_fees:
+    - text: "Tuition fees range from €8,500 – €12,500 per year depending on the program. We have flexible payment plans too!"
+
+  utter_scholarship:
+    - text: |
+        Yes! 🎉 We offer scholarships up to 40% based on:
+        • Academic performance
+        • Motivation letter
+        • Interview
+
+        Many students get €2,000–€5,000 off. Would you like me to check your eligibility?
+
+  utter_you_are_welcome:
+    - text: "You're very welcome! 😊 Anything else?"
+
+  utter_goodbye:
+    - text: "Bye! Feel free to come back anytime 👋. Visit www.berlinsbi.com for more info."
+
+  utter_default:
+    - text: "I'm sorry, I didn't quite understand. You can ask about programs, fees, scholarships, or admissions!"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by RASA, designed to help students like you."
+
+
+  utter_faq/is_bsbi_a_university:
+    - text: |
+        No, the Berlin School of Business and Innovation (BSBI) is not a university.
+        It is a private higher education institution that partners with accredited universities.
+
+  utter_faq/programmes_recognised:
+    - text: |
+        Yes, BSBI programmes are recognised through partner universities that award the degrees.
+
+  utter_faq/fibaa_accreditation:
+    - text: |
+        Some BSBI-delivered programmes offered through partner universities are FIBAA accredited.
+
+  utter_faq/ects_90_phd:
+    - text: |
+        A 90 ECTS master's may be accepted for PhD entry depending on the university.
+        Requirements vary internationally.
+
+  utter_faq/100_euro_fee:
+    - text: |
+        No, BSBI does not charge a 100-euro fee for assignment submission.
+
+  utter_faq/verify_degrees:
+    - text: |
+        BSBI partner university degrees can be verified via official German recognition databases
+        such as Anabin, depending on the awarding university.
+
+  utter_faq/not_on_daad:
+    - text: |
+        BSBI is not listed on DAAD because DAAD lists degree-awarding institutions only.
+        BSBI delivers teaching, while partner universities award degrees.
+
+  utter_faq/not_on_hochschulkompass:
+    - text: |
+        Hochschulkompass lists German degree-awarding institutions. BSBI is not one; partners award the degrees.
+
+  utter_faq/pay_deposit:
+    - text: |
+        Yes, applicants are typically required to pay a deposit to secure their place.
+
+  utter_faq/help_filling_application:
+    - text: |
+        You can contact the admissions team for help with any part of the application.
+
+  utter_faq/application_fee:
+    - text: |
+        BSBI does not charge an application fee.
+
+  utter_faq/tuition_fees:
+    - text: |
+        Tuition fees vary by programme. Please refer to the official BSBI website for programme-specific fees.
+
+  utter_faq/installments:
+    - text: |
+        Yes, BSBI allows instalment-based payment plans for tuition fees.
+
+  utter_faq/english_tests:
+    - text: |
+        BSBI accepts IELTS, TOEFL, PTE Academic and equivalent English proficiency tests.
+
+  utter_faq/study_hours:
+    - text: |
+        Students generally need to commit around 20–25 hours of study per week.
+
+  utter_faq/careers_service_fee:
+    - text: |
+        No, BSBI’s careers services are free for enrolled students.
+
+  utter_faq/accommodation:
+    - text: |
+        BSBI does not provide its own accommodation but can assist you with finding housing.
+
+  utter_faq/residence_permit_extension:
+    - text: |
+        Yes, graduates can typically extend residence permits for job-seeking in Germany.
+
+  utter_faq/visa_help:
+    - text: |
+        Yes, BSBI provides visa guidance and documentation support.
+
+  utter_faq/requirements_start_course:
+    - text: |
+        Students must have their admission letter, valid visa/residence permit, and health insurance before starting.
+
+  utter_faq/graduation_day:
+    - text: |
+        Yes, BSBI organises an annual graduation ceremony for eligible students.
+
+  utter_faq/intakes:
+    - text: |
+        BSBI typically offers multiple intakes throughout the year, depending on the programme.
+
+  utter_faq/subjects_specialisation:
+    - text: |
+        BSBI specialises in business, management, marketing, finance, and creative industries depending on the programme.
+
+  utter_faq/orientation_event:
+    - text: |
+        Yes, there is an orientation event for new students at the start of each intake.
+
+  utter_faq/german_classes:
+    - text: |
+        Yes, BSBI provides German language classes for students.
+
+  utter_faq/work_while_studying:
+    - text: |
+        Yes, international students can work part-time in Germany while studying, as per visa regulations.
+
+actions:
+  - action_get_program_details

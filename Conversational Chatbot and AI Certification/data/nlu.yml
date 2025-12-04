@@ -1,0 +1,382 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - good morning
+      - good evening
+      - hey there
+      - hi bot
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - catch you later
+      - quit
+
+  - intent: ask_programs
+    examples: |
+      - what programs do you offer?
+      - what courses are available?
+      - list of degrees
+      - do you have robotics?
+      - do you teach AI?
+      - show me masters programs
+      - tell me about your courses 
+
+  - intent: ask_specific_program
+    examples: |
+      - tell me about [AI](program)
+      - what about [MBA](program)
+      - [Data Science](program)
+      - [Digital Marketing](program)
+      - [Computer Science](program)
+      - more about [Robotics](program)
+      - tell me about [Animation](program)
+      - details for [Psychology](program)
+      - I want to study [MBA](program)
+      - [Global MBA](program) requirements
+      - info about [Tourism](program)
+      - [Graphic Design](program) course details
+      - [Finance](program) master
+      - [Blockchain](program) certificate
+      - I am interested in [AI](program)
+      - well do you guys have a program for [AI](program)?
+      - information about [Tourism](program)
+      - give me the information on [MBA](program) program
+      - tell me about the admission process for [AI](program)
+      - information about [MBA](program)
+      - details on [MSc Artificial Intelligence](program)
+      - tell me about [Msc programs](program)
+      - what can you tell me about [AI](program)?
+      - describe the [MBA](program) to me
+
+  - intent: ask_programs_by_level
+    examples: |
+      - what [undergraduate](program_level) courses do you have?
+      - show me [bachelor](program_level) degrees
+      - do you have [master](program_level) programs?
+      - list [postgraduate](program_level) courses
+      - what [doctorate](program_level) options are there?
+      - show me [certificate](program_level) courses
+      - I'm interested in [postgraduate](program_level) programs
+      - show me [undergraduate](program_level) options
+      - tell me about [postgraduate](program_level) degrees
+
+  - intent: ask_fees
+    examples: |
+      - what is the fee?
+      - how much does it cost?
+      - tuition fees
+      - price information
+      - what are the costs?
+      - tell me about pricing
+      - cost breakdown
+      - fee structure
+      - how expensive is it?
+      - what is the tuition fees. and is there any additional fee for this course?
+      - cost for [MBA](program)
+      - fee for [AI](program)
+
+  - intent: ask_location
+    examples: |
+      - where is the campus?
+      - give me the address
+      - location please
+      - where are you located?
+      - in which city is the university?
+
+  - intent: thank_you
+    examples: |
+      - thanks
+      - thank you
+      - thanks a lot
+      - appreciate it
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a robot?
+
+  - intent: ask_scholarship
+    examples: |
+      - scholarship
+      - do you offer scholarships
+      - i want a scholarship
+      - i would like a scholarship
+      - any scholarships
+      - financial aid
+      - discounts
+      - can i get a discount
+
+  - intent: faq/is_bsbi_a_university
+    examples: |
+      - Is BSBI a university?
+      - Is BSBI considered a university?
+      - Tell me if BSBI is a university
+      - Is BSBI officially a university?
+
+  - intent: faq/programmes_recognised
+    examples: |
+      - Are BSBI programmes recognised and accredited?
+      - Are the programmes at BSBI accredited?
+      - Tell me if BSBI programmes are officially recognised
+      - Does BSBI have accredited programmes?
+
+  - intent: faq/fibaa_accreditation
+    examples: |
+      - Are BSBI programmes FIBAA accredited?
+      - Is BSBI FIBAA approved?
+      - Tell me if BSBI has FIBAA accreditation
+      - Are the programmes reviewed by FIBAA?
+
+  - intent: faq/ects_90_phd
+    examples: |
+      - Our MA/MSc/MBA degrees award 90 ECTS. Will I still be able to apply for a PhD?
+      - Can I do a PhD with a 90 ECTS master's degree from BSBI?
+      - Tell me if 90 ECTS is enough for PhD admission
+      - Does a 90 ECTS program allow PhD eligibility?
+
+  - intent: faq/100_euro_fee
+    examples: |
+      - Is there an additional fee of 100 euros for assignment submission?
+      - Do I need to pay 100 euros extra for submitting assignments?
+      - Tell me if there is a 100 euro submission fee
+      - Does assignment submission cost 100 euros?
+
+  - intent: faq/verify_degrees
+    examples: |
+      - Where can I verify that BSBI degrees are approved by German authorities?
+      - How can I check if BSBI degrees are recognised in Germany?
+      - Tell me where I can verify BSBI degree approval
+      - Where to confirm BSBI’s approval status?
+
+  - intent: faq/not_on_daad
+    examples: |
+      - Why can’t I find BSBI on DAAD as a listed institution?
+      - BSBI is not on DAAD, why?
+      - Tell me why BSBI isn’t listed on DAAD
+      - Why BSBI does not appear on DAAD?
+
+  - intent: faq/not_on_hochschulkompass
+    examples: |
+      - Why can’t I find BSBI on the German listing hochschulkompass.de?
+      - BSBI is not listed on hochschulkompass.de, why?
+      - Tell me why BSBI isn’t on Hochschulkompass
+      - Why BSBI does not appear on Hochschulkompass?
+
+  - intent: faq/pay_deposit
+    examples: |
+      - Do I need to pay a deposit?
+      - Is there any deposit to be paid?
+      - Tell me if BSBI requires a deposit
+      - Do students have to pay a deposit?
+
+  - intent: faq/help_filling_application
+    examples: |
+      - I’m not sure how to complete part of the application – where can I get help?
+      - Where can I get help with my BSBI application?
+      - Tell me where to get support for application
+      - How do I get help filling the BSBI application?
+      - how do I apply?
+      - what is the application process?
+      - where can I apply?
+      - is there a link or something to apply?
+      - take me to the application page
+
+  - intent: faq/application_fee
+    examples: |
+      - Is there an application fee?
+      - Do I need to pay anything to apply?
+      - Tell me if there is a BSBI application fee
+      - Does applying to BSBI cost money?
+
+  - intent: faq/tuition_fees
+    examples: |
+      - What are the tuition fees?
+      - How much does BSBI cost?
+      - Tell me the fee structure
+      - What is the tuition cost?
+
+  - intent: faq/installments
+    examples: |
+      - Can I pay my tuition fees in instalments?
+      - Does BSBI allow instalments?
+      - Tell me if fees can be paid monthly
+      - Is instalment payment available?
+
+  - intent: faq/english_tests
+    examples: |
+      - What English language tests do you accept?
+      - Which English tests are accepted?
+      - Tell me what English exams BSBI accepts
+      - Do you accept IELTS or TOEFL?
+
+  - intent: faq/study_hours
+    examples: |
+      - How much time should I spend studying each week?
+      - Weekly study hours required?
+      - Tell me how much I need to study
+      - What is the expected study workload?
+
+  - intent: faq/careers_service_fee
+    examples: |
+      - Do I have to pay for the careers service?
+      - Is the BSBI careers service free?
+      - Tell me if the careers department costs money
+      - Does career counselling require payment?
+
+  - intent: faq/accommodation
+    examples: |
+      - Is BSBI providing accommodation?
+      - Does BSBI offer accommodation?
+      - Tell me if BSBI has student housing
+      - Is student living provided?
+
+  - intent: faq/residence_permit_extension
+    examples: |
+      - Can I extend my residence permit after I finish my course?
+      - Will I be able to extend my visa after graduation?
+      - Tell me if BSBI students can extend residence permits
+      - Can graduates stay longer in Germany?
+
+  - intent: faq/visa_help
+    examples: |
+      - Does BSBI offer help with my visa application?
+      - Does BSBI provide visa support?
+      - Tell me if BSBI helps with visas
+      - Visa assistance available?
+
+  - intent: faq/requirements_start_course
+    examples: |
+      - Is there anything I need to have when starting my course?
+      - What documents do I need when beginning the program?
+      - Tell me what I need before starting classes
+      - Requirements to start course?
+
+  - intent: faq/graduation_day
+    examples: |
+      - Is there a graduation day?
+      - Does BSBI hold a graduation ceremony?
+      - Tell me if BSBI has convocation
+      - Is there a convocation event?
+
+  - intent: faq/intakes
+    examples: |
+      - What intakes do you offer?
+      - When can I start studying?
+      - Tell me BSBI intake months
+      - What are BSBI start dates?
+
+  - intent: faq/subjects_specialisation
+    examples: |
+      - What subjects do you specialise in?
+      - What areas does BSBI focus on?
+      - Tell me BSBI’s specialisations
+      - Which subjects is BSBI strong in?
+
+  - intent: faq/orientation_event
+    examples: |
+      - Is there an orientation event for new students?
+      - Does BSBI host orientation?
+      - Tell me if there is orientation for new joiners
+      - Is there a welcome event?
+
+  - intent: faq/german_classes
+    examples: |
+      - Does BSBI offer German language classes?
+      - Can I learn German at BSBI?
+      - Tell me if German courses are available
+      - Is German taught at BSBI?
+
+  - intent: faq/work_while_studying
+    examples: |
+      - Can I work while studying at BSBI?
+      - Am I allowed to work during my studies?
+      - Tell me if I can work while enrolled
+      - Does BSBI allow part-time jobs?
+
+  # Synonyms
+  - synonym: undergraduate
+    examples: |
+      - bachelor
+      - bachelors
+      - undergrad
+      - BA
+      - BSc
+
+  - synonym: postgraduate
+    examples: |
+      - master
+      - masters
+      - postgrad
+      - MA
+      - MSc
+      - MBA
+  
+  - synonym: certification
+    examples: |
+      - certification-courses
+      - certification courses
+      - short-courses
+      - short courses
+
+  - synonym: BA (Hons) Animation
+    examples: |
+      - Animation
+      - cartoon
+      - animator
+
+  - synonym: BSc (Hons) Psychology
+    examples: |
+      - Psychology
+      - psych
+      - psychology degree
+
+  - synonym: Global MBA
+    examples: |
+      - Master of Business Administration
+      - Master in Business Administration
+      - business master
+
+  - synonym: BA (Hons) Tourism and Hospitality Management
+    examples: |
+      - Tourism
+      - Hospitality
+      - tourism management
+      - hotel management
+      - hotel course
+      - hospitality degree
+
+  - synonym: BA (Hons) Graphic Design (UCA)
+    examples: |
+      - Graphic Design
+      - graphics
+      - design
+
+  - synonym: MSc Finance & Investment
+    examples: |
+      - Finance
+      - Investment
+      - finance master
+  
+  - synonym: MSc Artificial Intelligence
+    examples: |
+      - AI
+      - Master's in AI
+      - Master of AI
+      - Master's in Artificial Intelligence
+      - Master of Artificial Intelligence
+      - MSc AI
+
+  - synonym: Certificate in Blockchain and Cryptocurrency
+    examples: |
+      - Blockchain
+      - Crypto
+      - cryptocurrency

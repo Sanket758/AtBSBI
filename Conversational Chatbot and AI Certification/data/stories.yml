@@ -1,0 +1,103 @@
+version: "3.1"
+
+stories:
+  - story: happy path greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: happy path - ask level then specific
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_programs_by_level
+      entities:
+      - program_level: "undergraduate"
+    - action: utter_list_undergraduate
+    - intent: ask_specific_program
+      entities:
+      - program: "MSc Artificial Intelligence"
+    - action: action_get_program_details
+
+  - story: ask fees generic then provide program
+    steps:
+      - intent: ask_fees
+      - action: utter_ask_which_program
+      - intent: ask_specific_program
+        entities:
+          - program: "Robotics"
+      - action: action_get_program_details
+      - intent: ask_fees
+      - action: utter_fees_specific
+
+  - story: ask location
+    steps:
+      - intent: ask_location
+      - action: utter_location
+
+  - story: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+  
+  - story: full happy path
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_programs
+    - action: utter_ask_which_level
+    - intent: ask_programs_by_level
+      entities:
+      - program_level: "postgraduate"
+    - action: utter_list_postgraduate
+    - intent: ask_specific_program
+      entities:
+        - program: "Global MBA"
+    - action: action_get_program_details
+    - action: utter_fees
+    - intent: ask_scholarship
+    - action: utter_scholarship
+    - intent: thank_you
+    - action: utter_you_are_welcome
+    - intent: goodbye
+    - action: utter_goodbye
+
+  - story: just programs and scholarship
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_programs
+    - action: utter_programs
+    - intent: ask_scholarship
+    - action: utter_scholarship
+
+  - story: thank you path
+    steps:
+    - intent: thank_you
+    - action: utter_you_are_welcome
+    - intent: goodbye
+    - action: utter_goodbye
+  
+  - story: User asks about program level, then a specific program, then fees
+    steps:
+      - intent: ask_programs_by_level
+        entities:
+        - program_level: "postgraduate"
+      - action: utter_list_postgraduate
+      - intent: ask_specific_program
+        entities:
+        - program: "MSc Finance & Investment"
+      - action: action_get_program_details
+      - intent: ask_fees
+      - action: utter_fees_specific
+      - intent: thank_you
+      - action: utter_you_are_welcome
+  
+  - story: Unhappy path - Fallback and recover
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: nlu_fallback
+      - action: utter_default
+      - intent: ask_programs
+      - action: utter_programs
