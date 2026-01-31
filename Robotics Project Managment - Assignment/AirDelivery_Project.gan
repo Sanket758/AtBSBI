@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Autonomous Drone Delivery" company="BSBI MSc AI" webLink="" view-date="2025-11-01" view-index="0" gantt-divider-location="613" resource-divider-location="300" version="3.3.3322" locale="en_IN">
+    <description><![CDATA[
+        Integration of Autonomous Aerial Delivery Units with Smart Thermal Storage Hubs for Urban Food Logistics.
+        Bimodal Project Management: Agile (Software) + Waterfall (Infrastructure)
+    ]]></description>
+    <view zooming-state="default:8" id="gantt-chart">
+        <field id="tpd3" name="Name" width="298" order="0"/>
+        <field id="tpd4" name="Begin date" width="111" order="1"/>
+        <field id="tpd5" name="End date" width="111" order="2"/>
+        <field id="tpd6" name="Duration" width="77" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="206" order="0"/>
+        <field id="1" name="Default role" width="90" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="1" uid="d8f84ecc52f4451eb450922a31f55e85" name="PHASE 1: Project Initiation" meeting="false" start="2026-01-05" duration="40" complete="0" expand="true">
+            <task id="2" uid="322cf7b59eb84b65b71fa05be816a23a" name="Project Brief Development" meeting="false" start="2026-01-05" duration="5" complete="0" priority="2" expand="true"/>
+            <task id="3" uid="4edd122e22554b898b6fc734b2e27bfb" name="M0: Project Brief Approved" meeting="true" start="2026-01-12" duration="0" complete="0" priority="2" expand="true"/>
+            <task id="4" uid="3288302262c54ca6bbbda286c655df11" name="Project Initiation Document (PID)" meeting="false" start="2026-01-12" duration="10" complete="0" priority="2" expand="true">
+                <depend id="5" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="5" uid="0b6bb5321ac54794850e5e7191035c85" name="M1: PID Approved" meeting="true" start="2026-01-22" duration="0" complete="0" priority="2" expand="true"/>
+            <task id="6" uid="5e785f6fae7e4292a2e4e295834be13f" name="FAA Part 107 Waiver Application" color="#ff0000" meeting="false" start="2026-01-05" duration="40" complete="0" priority="2" expand="true">
+                <notes><![CDATA[CRITICAL PATH ITEM - Regulatory approval is primary schedule driver]]></notes>
+            </task>
+            <task id="7" uid="0828950d4d064f99ada6a86d56e6ffb2" name="EASA SORA Assessment Submission" color="#ff0000" meeting="false" start="2026-01-05" duration="40" complete="0" priority="2" expand="true"/>
+            <task id="8" uid="6ee38b53fa3d44cda9d86b792ed04945" name="Site Surveys Complete" meeting="false" start="2026-01-12" duration="20" complete="0" expand="true"/>
+            <task id="9" uid="35b37a6fe034408e8062a4703a53a202" name="Privacy Impact Assessment" meeting="false" start="2026-01-19" duration="15" complete="0" expand="true"/>
+            <task id="10" uid="776414b2c39749deac37abe977560f79" name="Stakeholder Engagement (Initial)" meeting="false" start="2026-01-05" duration="20" complete="0" expand="true"/>
+        </task>
+        <task id="20" uid="306835f9d3ba455480c1b103ce4ae0ad" name="PHASE 2: Development" meeting="false" start="2026-02-23" duration="80" complete="0" expand="true">
+            <task id="21" uid="0d01664fb60a45df985fa1d0fd9f29a3" name="WATERFALL: Ground Infrastructure" meeting="false" start="2026-02-23" duration="67" complete="0" expand="true">
+                <task id="22" uid="c7ff53c7cb7842d6b1db95f2ffb23cad" name="Rooftop Hub Civil Engineering" meeting="false" start="2026-02-23" duration="20" complete="0" expand="true"/>
+                <task id="23" uid="550cb89e1ccc434e9d1d2af6101db9d2" name="Electrical Permit Applications" meeting="false" start="2026-02-23" duration="30" complete="0" expand="true">
+                    <depend id="24" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="24" uid="da631f7a6f914106a6a950d6ab9fbd93" name="M2: Electrical Permits Approved" meeting="true" start="2026-03-25" duration="0" complete="0" expand="true"/>
+                <task id="25" uid="dae779aca6b241ca8b8ef51f580b0434" name="Launch/Recovery Platform Fabrication" meeting="false" start="2026-03-09" duration="25" complete="0" expand="true">
+                    <depend id="26" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="26" uid="ffeec4153efb422db91daf45dd9639a1" name="Rooftop Hub Installation" meeting="false" start="2026-04-03" duration="20" complete="0" expand="true"/>
+                <task id="27" uid="09d663d44460456980f8a08b6cc981fd" name="Smart Locker Manufacturing" meeting="false" start="2026-02-23" duration="50" complete="0" expand="true">
+                    <depend id="28" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="28" uid="1a55a66b255144acb45d51265aaf2010" name="IoT Sensor Calibration" meeting="false" start="2026-04-14" duration="15" complete="0" expand="true"/>
+                <task id="29" uid="722fd8ef2252475287c57e9999286cd4" name="Electrical &amp; Network Provision (Lockers)" meeting="false" start="2026-04-06" duration="25" complete="0" expand="true"/>
+            </task>
+            <task id="30" uid="cc6f2567ebd44e6b8703e03b2afc144d" name="WATERFALL: Drone Fleet Hardware" meeting="false" start="2026-02-23" duration="71" complete="0" expand="true">
+                <task id="31" uid="52c98166b79e49aeaf346a64788f04ee" name="Airframe Procurement" meeting="false" start="2026-02-23" duration="30" complete="0" expand="true">
+                    <depend id="32" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="32" uid="21d566a7a1114effad926aed6917fd99" name="Airframe Assembly" meeting="false" start="2026-03-25" duration="15" complete="0" expand="true"/>
+                <task id="33" uid="f35841ddb44449c6ac229527320e7cbf" name="Thermal Payload Container Development" meeting="false" start="2026-03-02" duration="25" complete="0" expand="true"/>
+                <task id="34" uid="baa98f260e5a45cda57a0318c6a329c3" name="Avionics Configuration (Pixhawk/PX4)" meeting="false" start="2026-03-16" duration="20" complete="0" expand="true"/>
+                <task id="35" uid="ea63bb050ee24b5780ee933804c5c382" name="Charging Station Installation" meeting="false" start="2026-04-20" duration="15" complete="0" expand="true"/>
+            </task>
+            <task id="40" uid="17ef9fa4a49147e7a8c40aaddd07febb" name="AGILE: Flight Software Development" color="#0000ff" meeting="false" start="2026-02-23" duration="80" complete="0" expand="true">
+                <task id="41" uid="1e683111c50c4e598692b23c17b25717" name="Sprint 1: Flight Controller Config" meeting="false" start="2026-02-23" duration="10" complete="0" expand="true"/>
+                <task id="42" uid="18c7e916c5d04338966a30b64567a88c" name="Sprint 2: Basic Telemetry (5G/LTE)" meeting="false" start="2026-03-09" duration="10" complete="0" expand="true"/>
+                <task id="43" uid="5d0c70a090224da18272de1b58abfe18" name="Sprint 3: Collision Avoidance v1" meeting="false" start="2026-03-23" duration="10" complete="0" expand="true"/>
+                <task id="44" uid="9be855ae381b4c1b87d22074ae3952e0" name="Sprint 4: LIDAR Tuning &amp; GPS-denied Landing" meeting="false" start="2026-04-06" duration="10" complete="0" expand="true"/>
+                <task id="45" uid="e2ad47b39c084692be1b018828fd9e90" name="Sprint 5: Wind Gust Rejection" meeting="false" start="2026-04-20" duration="10" complete="0" expand="true"/>
+                <task id="46" uid="b56ba92596db48c8852a23a0a07bb1c7" name="Sprint 6: Precision Landing Refinement" meeting="false" start="2026-05-04" duration="10" complete="0" expand="true"/>
+            </task>
+            <task id="50" uid="169ad6915ed54c288748c1084c8cee84" name="SAFETY CERTIFICATION" color="#ff0000" meeting="false" start="2026-03-23" duration="48" complete="0" expand="true">
+                <notes><![CDATA[CRITICAL PATH - Pilot Launch depends on Safety Certification completion]]></notes>
+                <task id="51" uid="9b1946489e134f49aed8d251efcc3381" name="Safety Case Documentation" meeting="false" start="2026-03-23" duration="20" complete="0" expand="true"/>
+                <task id="52" uid="232450d5baf945618bc8a958b6fb9f4a" name="Regulatory Review Process" color="#ff0000" meeting="false" start="2026-04-20" duration="20" complete="0" expand="true">
+                    <depend id="53" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="53" uid="b38bded9132f4ac9919a2f3a447a27b6" name="M3: Safety Certification Granted" color="#ff0000" meeting="true" start="2026-05-10" duration="0" complete="0" priority="2" expand="true"/>
+            </task>
+        </task>
+        <task id="60" uid="02f1c52e894e484a8202a8522fd7d678" name="PHASE 3: Integration &amp; Testing" meeting="false" start="2026-05-18" duration="52" complete="0" expand="true">
+            <task id="61" uid="0610de3eac9b47bf96307b3d2564df66" name="Smart Locker Installation" meeting="false" start="2026-05-18" duration="20" complete="0" expand="true">
+                <depend id="62" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="62" uid="98783aa44c5949ceba783148e247958f" name="M4: Infrastructure Ready" meeting="true" start="2026-06-07" duration="0" complete="0" expand="true"/>
+            <task id="63" uid="09ce35488ac045959fe191310ba34e0c" name="Hardware-Software Integration" meeting="false" start="2026-05-18" duration="15" complete="0" expand="true"/>
+            <task id="64" uid="655bc4be96f44d40b01e8aadfd3ee8b2" name="Drone-to-Locker API Testing" meeting="false" start="2026-05-25" duration="20" complete="0" expand="true"/>
+            <task id="65" uid="0a1ddcc94b7c4deeb71df40a0b3a6d3e" name="End-to-End Latency Testing (&lt;100ms)" color="#ff0000" meeting="false" start="2026-06-08" duration="15" complete="0" expand="true">
+                <depend id="66" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="66" uid="fa735940542547f8aa35085c0cf7b733" name="Communication Failover Testing" meeting="false" start="2026-06-23" duration="10" complete="0" expand="true"/>
+            <task id="67" uid="6c9766ffea35451cae1d15474a99e036" name="Emergency Procedures Validation" meeting="false" start="2026-06-22" duration="10" complete="0" expand="true"/>
+            <task id="68" uid="50182d169c39462d95f9fcc6d80f43f2" name="User Acceptance Testing (UAT)" meeting="false" start="2026-06-29" duration="10" complete="0" expand="true">
+                <depend id="69" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="69" uid="5439255c8f32496fb3a46aae98bf9ea5" name="M5: Integration Complete" meeting="true" start="2026-07-09" duration="0" complete="0" priority="2" expand="true"/>
+        </task>
+        <task id="70" uid="6c9800525fa646a1b033860879acfae6" name="PHASE 4: Pilot Launch &amp; Closure" color="#008000" meeting="false" start="2026-07-13" duration="47" complete="0" expand="true">
+            <task id="71" uid="35b8606dd7e849ac90be1dc42d4959a4" name="Staff Training Programme" meeting="false" start="2026-07-13" duration="10" complete="0" expand="true"/>
+            <task id="72" uid="05d2c2ce4fb94facb3d08c9dd37de5d2" name="Customer Onboarding" meeting="false" start="2026-07-20" duration="10" complete="0" expand="true"/>
+            <task id="73" uid="ac378efe36774cb38b4eaccda9e1a6f3" name="PILOT LAUNCH" color="#008000" meeting="false" start="2026-07-27" duration="20" complete="0" expand="true">
+                <notes><![CDATA[Operational pilot in designated urban corridor]]></notes>
+                <depend id="74" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="74" uid="5c8957d5a0cd4f079a7926bd99f5fc6d" name="M6: Pilot Operational" color="#008000" meeting="true" start="2026-08-16" duration="0" complete="0" priority="2" expand="true"/>
+            <task id="75" uid="f29c8c3801f34637b556a5a0b8adf853" name="Performance Optimisation" meeting="false" start="2026-08-03" duration="20" complete="0" expand="true"/>
+            <task id="76" uid="d162de7bf1d74212b3a25824be8fd282" name="Project Closure Documentation" meeting="false" start="2026-08-17" duration="10" complete="0" expand="true"/>
+            <task id="77" uid="110cde48a9fb47cdb240f2d877983f54" name="Lessons Learned Workshop" meeting="false" start="2026-08-24" duration="5" complete="0" expand="true">
+                <depend id="78" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="78" uid="8b690d6cc9b84f749a97f27629710ba4" name="M7: Project Closed" meeting="true" start="2026-08-29" duration="0" complete="0" expand="true"/>
+        </task>
+        <task id="80" uid="3a415ad753ae48d1bf0721e16ef6dead" name="PHASE 5: Benefits Realisation" meeting="false" start="2026-08-31" duration="82" complete="0" expand="true">
+            <task id="81" uid="6e4aad5b75434270971eb7426436c21c" name="Post-Project Performance Review" meeting="false" start="2026-08-31" duration="20" complete="0" expand="true"/>
+            <task id="82" uid="bd5cd44463df47b9836c5f13bf4a1ebf" name="Benefits Measurement (Delivery Time)" meeting="false" start="2026-09-28" duration="40" complete="0" expand="true"/>
+            <task id="83" uid="8e1d8d3d7f324b0f983b34dc95741f87" name="Benefits Measurement (Cost Reduction)" meeting="false" start="2026-10-12" duration="40" complete="0" expand="true"/>
+            <task id="84" uid="1b044c206a4d4657a959d17af7c6e0e0" name="Benefits Realisation Report" meeting="false" start="2026-11-09" duration="10" complete="0" expand="true">
+                <depend id="85" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="85" uid="120ba284745442fc82a0832f0fdaa55f" name="M8: Benefits Report Complete" meeting="true" start="2026-11-19" duration="0" complete="0" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="1" name="Project Manager" function="Default:1" contacts="" phone=""/>
+        <resource id="2" name="Senior Responsible Owner (SRO)" function="Default:0" contacts="" phone=""/>
+        <resource id="3" name="Technical Lead (Software)" function="Default:0" contacts="" phone=""/>
+        <resource id="4" name="Technical Lead (Hardware)" function="Default:0" contacts="" phone=""/>
+        <resource id="5" name="Integration Engineer" function="Default:0" contacts="" phone=""/>
+        <resource id="6" name="Safety Officer" function="Default:0" contacts="" phone=""/>
+        <resource id="7" name="AI/ML Engineer" function="Default:0" contacts="" phone=""/>
+        <resource id="8" name="Regulatory Compliance Officer" function="Default:0" contacts="" phone=""/>
+        <resource id="9" name="Operations Manager" function="Default:0" contacts="" phone=""/>
+        <resource id="10" name="Communications Lead" function="Default:0" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="2" resource-id="1" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="1" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="41" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="42" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="22" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="4" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="64" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="65" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="51" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="52" resource-id="6" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="43" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="44" resource-id="7" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="6" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="8" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="73" resource-id="9" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
