@@ -1,0 +1,46 @@
+from setuptools import setup
+from glob import glob
+import os
+
+package_name = "yolo_pose_pkg"
+
+setup(
+    name=package_name,
+    version="0.1.0",
+    packages=[package_name],
+    data_files=[
+        ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
+        ("share/" + package_name, ["package.xml"]),
+        # Launch files
+        (os.path.join("share", package_name, "launch"), glob("launch/*.py")),
+        # Config files
+        (
+            os.path.join("share", package_name, "config"),
+            glob("config/*.yaml") + glob("config/*.rviz"),
+        ),
+        # World files
+        (os.path.join("share", package_name, "worlds"), glob("worlds/*.sdf")),
+        # Model configs (not meshes - those stay in src)
+        (
+            os.path.join("share", package_name, "models", "cow"),
+            ["models/cow/model.sdf", "models/cow/model.config"],
+        ),
+        (
+            os.path.join("share", package_name, "models", "spot_micro"),
+            ["models/spot_micro/model.sdf", "models/spot_micro/model.config"],
+        ),
+    ],
+    install_requires=["setuptools"],
+    zip_safe=True,
+    maintainer="sanket758",
+    maintainer_email="your@email.com",
+    description="YOLO Pose Estimation for Cow Keypoint Detection",
+    license="MIT",
+    tests_require=["pytest"],
+    entry_points={
+        "console_scripts": [
+            "yolo_pose_node = yolo_pose_pkg.yolo_pose_node:main",
+            "cow_pose_node = yolo_pose_pkg.cow_pose_node:main",
+        ],
+    },
+)

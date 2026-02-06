@@ -1,0 +1,19 @@
+# Cow Pose Estimation Parameters
+cow_pose_node:
+  ros__parameters:
+    # Model configuration
+    model_path: "yolo26n_with_kpt.pt"
+    device: "cuda:0"
+    
+    # Detection thresholds
+    conf_threshold: 0.5
+    iou_threshold: 0.45
+    
+    # Topics
+    camera_topic: "/camera/image_raw"
+    
+    # Visualization
+    draw_labels: false
+    
+    # Performance
+    publish_rate_limit: 30.0

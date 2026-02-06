@@ -1,0 +1,33 @@
+{
+  "model": "yolo_pose_ws/yolov8n-pose.pt",
+  "dataset": "3d-cows/coco8-pose",
+  "resolved_yaml": "report_assets/coco_pretrained/coco8-pose.resolved.yaml",
+  "grid_figure": "report_assets/coco_pretrained/coco_pretrained_pose_grid.png",
+  "metrics_json": "report_assets/coco_pretrained/coco8_pose_val_metrics.json",
+  "items": [
+    {
+      "image": "000000000110.jpg",
+      "image_path": "3d-cows/coco8-pose/images/val/000000000110.jpg",
+      "annotated_path": "report_assets/coco_pretrained/annotated/000000000110_annotated.jpg",
+      "detections": 8
+    },
+    {
+      "image": "000000000113.jpg",
+      "image_path": "3d-cows/coco8-pose/images/val/000000000113.jpg",
+      "annotated_path": "report_assets/coco_pretrained/annotated/000000000113_annotated.jpg",
+      "detections": 3
+    },
+    {
+      "image": "000000000136.jpg",
+      "image_path": "3d-cows/coco8-pose/images/val/000000000136.jpg",
+      "annotated_path": "report_assets/coco_pretrained/annotated/000000000136_annotated.jpg",
+      "detections": 2
+    },
+    {
+      "image": "000000000151.jpg",
+      "image_path": "3d-cows/coco8-pose/images/val/000000000151.jpg",
+      "annotated_path": "report_assets/coco_pretrained/annotated/000000000151_annotated.jpg",
+      "detections": 2
+    }
+  ]
+}

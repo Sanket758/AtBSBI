@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+from yolo_pose_pkg.yolo_pose_node import main
+main()

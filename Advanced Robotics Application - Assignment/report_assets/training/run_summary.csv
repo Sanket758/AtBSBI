@@ -1,0 +1,8 @@
+run,model,requested_epochs,last_epoch,best_epoch_pose_map95,best_pose_map50,best_pose_map50_95,last_pose_map50,last_pose_map50_95,best_weight_mb
+with_kpt_sigmas,yolov8s-pose.pt,150,150,135,0.45516,0.15411,0.44630,0.14536,23.07
+with_kpt_sigmas_no_hyps2,/content/drive/MyDrive/cow_pose_training/experiments/with_kpt_sigmas/weights/best.pt,200,32,17,0.38502,0.12045,0.29002,0.07859,23.04
+with_kpt_sigmas_no_hyps_medium_size,yolov8m-pose.pt,200,133,127,0.08524,0.02329,0.05383,0.00994,51.56
+with_kpt_sigmas_medium,yolov8m-pose.pt,500,100,99,0.07697,0.00770,0.01881,0.00188,51.54
+with_kpt_sigmas_yolo26n,yolo26n-pose.pt,500,204,174,0.71705,0.24166,0.62698,0.18778,9.29
+with_kpt_sigmas_yolo26m,yolo26m-pose.pt,500,11,11,0.00048,0.00005,0.00048,0.00005,148.86
+pose/20260206_021532,yolov8m-pose.pt,100,100,100,0.07667,0.01195,0.07667,0.01195,51.54

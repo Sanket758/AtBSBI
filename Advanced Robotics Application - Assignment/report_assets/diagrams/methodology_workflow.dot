@@ -1,0 +1,40 @@
+digraph MethodologyWorkflow {
+  rankdir=TB;
+  graph [fontsize=11, fontname="Helvetica", labelloc="t", label="Methodology Workflow: Iterative Challenge Resolution"];
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10, color="#2f4f4f", fillcolor="#eef5f9"];
+  edge [fontname="Helvetica", fontsize=9, color="#3b4d5c", arrowsize=0.8];
+
+  start [label="Start: Cow pose project setup\n(dataset + simulation + ROS2 stack)", fillcolor="#d9edf7"];
+  detect [label="Detect practical failure mode\n(e.g., orientation, skeleton mapping, model URI, placement)"];
+  isolate [label="Isolate likely root cause\n(frame convention / annotation semantics / resource path)"];
+  onefix [label="Apply one controlled fix only\n(single variable change)", fillcolor="#fcf8e3"];
+  rebuild [label="If assets/config changed:\ncolcon build --symlink-install\nsource install/setup.bash"];
+  validate [label="Re-validate in simulator and logs\nvisual checks + topic checks + metric checks"];
+  pass [shape=diamond, label="Issue resolved?", fillcolor="#f5f5f5"];
+  document [label="Document learning\nupdate scripts/configs/notes", fillcolor="#dff0d8"];
+  next [shape=diamond, label="More failures\nor weak spots?", fillcolor="#f5f5f5"];
+  final [label="Stable pipeline\ntrain/evaluate/select best model", fillcolor="#d9edf7"];
+
+  frame_branch [label="Frame/geometry checks\n(Y-up vs Z-up, origin, roll/pitch)", fillcolor="#eefaf0"];
+  semantic_branch [label="Semantic QA checks\n(keypoint order, skeleton edges)", fillcolor="#eefaf0"];
+  runtime_branch [label="Runtime/resource checks\n(model URI, symlink, topic data)", fillcolor="#eefaf0"];
+
+  start -> detect -> isolate;
+  isolate -> frame_branch [label="if spatial issue"];
+  isolate -> semantic_branch [label="if overlay issue"];
+  isolate -> runtime_branch [label="if launch/runtime issue"];
+
+  frame_branch -> onefix;
+  semantic_branch -> onefix;
+  runtime_branch -> onefix;
+
+  onefix -> rebuild;
+  rebuild -> validate;
+  validate -> pass;
+  pass -> document [label="Yes"];
+  pass -> detect [label="No: iterate", color="#b94a48", fontcolor="#b94a48"];
+
+  document -> next;
+  next -> detect [label="Yes: continue loop"];
+  next -> final [label="No: proceed"];
+}
